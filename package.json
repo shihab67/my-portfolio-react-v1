@@ -8,7 +8,11 @@
     "@testing-library/user-event": "^12.1.10",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-owl-carousel": "^2.3.3",
+    "react-router-dom": "^5.2.0",
+    "react-scenejs": "^1.1.0",
     "react-scripts": "4.0.1",
+    "react-scroll": "^1.8.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
@@ -34,5 +38,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "css-loader": "^5.0.1",
+    "style-loader": "^2.0.0"
   }
 }
