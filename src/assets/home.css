@@ -24,7 +24,7 @@
 .container .box .title .block {
   width: 0%;
   height: inherit;
-  background: #ffb510;
+  background: #21be6f;
   position: absolute;
   animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
   display: flex;
@@ -48,7 +48,7 @@
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  background: #ffb510;
+  background: #21be6f;
   -webkit-animation: load 0.6s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
   animation: popIn 0.8s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
   animation-delay: 2s;
@@ -127,14 +127,14 @@
   0% {
     width: 0px;
     height: 0px;
-    background: #e9d856;
+    background: #21be6f;
     border: 0px solid #ddd;
     opacity: 0;
   }
   50% {
     width: 10px;
     height: 10px;
-    background: #e9d856;
+    background: #21be6f;
     opacity: 1;
     bottom: 45px;
   }
@@ -152,7 +152,7 @@
   100% {
     width: 7px;
     height: 7px;
-    background: #e9d856;
+    background: #21be6f;
     border: 0px solid #222;
     bottom: 13px;
   }
@@ -237,7 +237,7 @@
   padding-top: 2rem;
 }
 .header h2 {
-  color: #e91e63;
+  color: #21be6f;
   text-transform: uppercase;
   font-weight: 600;
 }

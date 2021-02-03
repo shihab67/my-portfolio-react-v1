@@ -1,9 +1,13 @@
 import React from "react";
 import "../assets/footer.css";
+import ThinkingSvg from "../components/ThinkingSvg";
 
 export default function Footer() {
   return (
     <footer>
+      <div className="thinking">
+        <ThinkingSvg />
+      </div>
       <div className="content">
         <p>
           &copy; {new Date().getFullYear()} SAYEDUR RAHMAN. ALL RIGHTS RESERVED.

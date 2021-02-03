@@ -7,8 +7,9 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 50px;
-  box-shadow: inset 1px 8px 12px -10px #e91e63;
+  height: 50px;
+  box-shadow: inset 1px 8px 10px -10px #21be6f;
+  position: relative;
 }
 footer .icons {
   position: absolute;
@@ -57,4 +58,12 @@ footer .icons {
   justify-content: center;
   font-size: 11px;
 }
-
+.thinking{
+  position: absolute;
+  right: 0;
+  bottom: 41px;
+}
+.thinking svg{
+  height: 90px;
+  width: 300px;
+}
