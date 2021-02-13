@@ -1,7 +1,7 @@
 import React from "react";
 //import Nav from "./pages/Nav";
-//import Home from "./pages/Home";
-//import Footer from "./pages/Footer";
+import Home from "./pages/Home";
+import Footer from "./pages/Footer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 //import About from "./pages/About";
 import Nav2 from "./pages/Nav2";
@@ -11,15 +11,15 @@ function App() {
     <Router>
       <div className="App">
         <Nav2 />
-        {/* <Switch>
+         <Switch>
           <Route path="/" exact>
             <Home />
           </Route>
-          <Route path="/about" exact>
+          {/* <Route path="/about" exact>
             <About />
-          </Route>
+          </Route> */}
         </Switch>
-        <Footer /> */}
+        <Footer />
       </div>
     </Router>
   );

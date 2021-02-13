@@ -34,9 +34,9 @@ export default function Nav2() {
   return (
     <div>
       <nav className={`nav ${isNav === true ? "affix" : null}`}>
-        <div className="container">
+        <div className="nav-container">
           <div className="logo">
-            <a href="#">Your Logo</a>
+            <a href="#">Sayedur Rahman</a>
           </div>
           <div
             id="mainListDiv"
@@ -46,16 +46,16 @@ export default function Nav2() {
           >
             <ul className="navlinks">
               <li>
-                <a href="#">About</a>
+                <Link className="link" to="/">Home</Link>
               </li>
               <li>
-                <a href="#">Portfolio</a>
+                <Link className="link" to="/portfolio">Portfolio</Link>
               </li>
               <li>
-                <a href="#">Services</a>
+                <Link className="link" to="/about">About</Link>
               </li>
               <li>
-                <a href="#">Contact</a>
+                <Link className="link" to="/contact">Contact</Link>
               </li>
             </ul>
           </div>
@@ -69,7 +69,7 @@ export default function Nav2() {
           </span>
         </div>
       </nav>
-      <section className="home"></section>
+      {/* <section className="home"></section>
       <div style={{ height: "1000px" }}>
         <h2 className="myH2">What is this ?</h2>
         <p className="myP">
@@ -116,7 +116,7 @@ export default function Nav2() {
           ex totam, dolore sequi harum eos voluptatibus animi labore officiis
           minus laboriosam
         </p>
-      </div>
+      </div> */}
     </div>
   );
 }
