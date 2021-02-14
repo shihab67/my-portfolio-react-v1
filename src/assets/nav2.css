@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 :root {
   --primary-color: rgba(3, 19, 33, 0.75);
-  --svg-color: rgba(21, 225, 240, 0.80);
+  --svg-color: rgba(21, 225, 240, 0.8);
   --overlay-color: rgba(24, 39, 51, 0.85);
   --menu-speed: 0.75s;
 }
@@ -11,7 +11,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: #191f26;
 }
 .nav {
@@ -353,10 +353,7 @@ body {
   }
 }
 
-
 /* Home CSS Start */
-/* ///////////////// */
-/* ///////////////// */
 .showcase {
   color: #fff;
   height: 100vh;
@@ -364,22 +361,21 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.showcase .left{
+.showcase .left {
   background: var(--primary-color);
   width: 50%;
 }
-.showcase .right{
+.showcase .right {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 50%;
   background: var(--svg-color);
 }
-.showcase .right svg{
+.showcase .right svg {
   height: 400px;
   width: 550px;
 }
-
 
 .showcase .showcase-inner {
   display: flex;
@@ -413,7 +409,7 @@ body {
 .container .box .title .block {
   width: 0%;
   height: inherit;
-  background: #15E1F0;
+  background: #15e1f0;
   position: absolute;
   animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
   display: flex;
@@ -436,7 +432,7 @@ body {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  background: #15E1F0;
+  background: #15e1f0;
   -webkit-animation: load 0.6s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
   animation: popIn 0.8s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
   animation-delay: 2s;
@@ -457,7 +453,7 @@ body {
 .container .box .role .block {
   width: 0%;
   height: inherit;
-  background: #e91e63;
+  background: #ff9800;
   position: absolute;
   animation: secBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
   animation-delay: 2s;
@@ -514,14 +510,14 @@ body {
   0% {
     width: 0px;
     height: 0px;
-    background: #15E1F0;
+    background: #15e1f0;
     border: 0px solid #ddd;
     opacity: 0;
   }
   50% {
     width: 10px;
     height: 10px;
-    background: #15E1F0;
+    background: #15e1f0;
     opacity: 1;
     bottom: 45px;
   }
@@ -539,7 +535,7 @@ body {
   100% {
     width: 7px;
     height: 7px;
-    background: #15E1F0;
+    background: #15e1f0;
     border: 0px solid #222;
     bottom: 13px;
   }
@@ -576,62 +572,165 @@ body {
     bottom: 0px;
   }
 }
-.portfolio{
+#left-hand {
+  animation: wave-animation 3s linear infinite; /* Refers to the name of your @keyframes element below */
+  transform-origin: 100% 100%; /* Pivot around the bottom-left palm */
+  transform-box: fill-box;
+  display: inline-block;
+}
+#right-hand {
+  animation: wave-animation-right 3s linear infinite; /* Refers to the name of your @keyframes element below */
+  transform-origin: 0% 100%; /* Pivot around the bottom-left palm */
+  transform-box: fill-box;
+  display: inline-block;
+}
+@keyframes wave-animation {
+  0% {
+    transform: rotate(-0deg);
+  }
+  10% {
+    transform: rotate(20deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(15deg);
+  }
+  30% {
+    transform: rotate(-12deg);
+  }
+  40% {
+    transform: rotate(7deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  60% {
+    transform: rotate(-0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(-0deg);
+  }
+}
+@keyframes wave-animation-right {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-20deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-15deg);
+  }
+  30% {
+    transform: rotate(12deg);
+  }
+  40% {
+    transform: rotate(-7deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+#typing {
+  position: relative;
+  font-size: 200px;
+}
+#typing::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  width: 100%;
+  color: white;
+  background: #1d1f20;
+  -webkit-animation: typing 4s steps(16) forwards, caret 1s infinite;
+  animation: typing 4s steps(16) forwards, caret 1s infinite;
+}
+
+@-webkit-keyframes typing {
+  to {
+    width: 0;
+  }
+}
+
+@keyframes typing {
+  to {
+    width: 0;
+  }
+}
+@-webkit-keyframes caret {
+  50% {
+    color: transparent;
+  }
+}
+@keyframes caret {
+  50% {
+    color: transparent;
+  }
+}
+.portfolio {
   height: 100%;
   margin-top: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 50px 50px 50px;
+  padding: 0 55px 50px 55px;
 }
-.portfolio .header{
+.portfolio .header {
   margin-bottom: 2rem;
 }
-.portfolio .header h2{
-    color: #fff;
-    font-size: 30px;
+.portfolio .header h2 {
+  color: #fff;
+  font-size: 30px;
 }
-.portfolio .header .border{
+.portfolio .header .border {
   height: 6px;
   background: #15e1f0;
   width: 40%;
   border-radius: 25px;
   margin-left: auto;
 }
-.single-port{
+.single-port {
   display: flex;
   justify-content: space-between;
   background: var(--primary-color);
   height: 330px;
+  width: 100%;
   margin-bottom: 40px;
 }
-.single-port .port-img{
+.single-port .port-img {
   height: 330px;
   width: 50%;
 }
-.port-img img{
+.port-img img {
   height: inherit;
-  width: fit-content;
+  width: 100%;
 }
-.single-port .port-desc{
+.single-port .port-desc {
   display: flex;
   flex-direction: column;
   width: 50%;
+  box-sizing: border-box;
   padding: 40px 20px 0 20px;
 }
-.single-port p,h3{
+.single-port p,
+h3 {
   color: #fff;
 }
-.single-port h3{
+.single-port h3 {
   font-size: 20px;
 }
-.single-port p{
-  font-size: 16px;
+.single-port p {
+  font-size: 14px;
   line-height: 1.5em;
   text-align: justify;
 }
-.single-port .port-border{
+.single-port .port-border {
   height: inherit;
   width: 4px;
   background: #15e1f0;
@@ -640,56 +739,73 @@ body {
   display: inline-flex;
   height: 35px;
   width: 150px;
-  border: 2px solid #BFC0C0;
-  color: #BFC0C0;
+  border: 2px solid #15e1f0;
+  color: #15e1f0;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: .7em;
+  font-size: 0.7em;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
+#button-5 {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
 
-a#button-1 {
-  color: #BFC0C0;
+#button-5 a {
+  position: relative;
   text-decoration: none;
+  color: #15e1f0;
+  transition: all 0.45s ease-Out;
 }
 
-
-#arrow-hover {
-  width: 15px;
-  height: 10px;
+#translate {
+  transform: rotate(50deg);
+  width: 100%;
+  height: 250%;
+  left: -200px;
+  top: -30px;
+  background: #15e1f0;
   position: absolute;
-  transform: translateX(60px);
-  opacity: 0;
-  -webkit-transition: all .25s cubic-bezier(.14, .59, 1, 1.01);
-  transition: all .15s cubic-bezier(.14, .59, 1, 1.01);
-  margin: 0;
-  margin-left: 8px;
-  padding: 0 10px;
+  transition: all 0.3s ease-Out;
+}
+.bounce {
+  animation: bounce 1s ease infinite;
+}
+@keyframes bounce {
+  50% {
+    transform: translateY(-20%);
+  }
 }
 
-a#button-1:hover img {
-  width: 15px;
-  opacity: 1;
-  transform: translateX(50px);
+#button-5:hover #translate {
+  left: 0;
 }
-.single-port .port-desc .tech{
+
+#button-5:hover a {
+  color: var(--primary-color);
+}
+
+.single-port .port-desc .tech {
   display: flex;
   justify-content: space-between;
+  padding-top: 20px;
 }
-.tech .tech-icons{
+.tech .tech-icons {
   font-size: 30px;
 }
-.tech-icons i{
+.tech-icons i {
   padding-right: 10px;
 }
-.tech-icons i.laravel{
+.tech-icons i.laravel {
   color: red;
 }
-.tech-icons i.bs{
-  color: #563d7c ;
+.tech-icons i.bs {
+  color: #563d7c;
 }
-.tech-icons i.js{
+.tech-icons i.js {
   color: yellow;
 }
+/* Home CSS End*/

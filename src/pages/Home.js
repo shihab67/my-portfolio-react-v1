@@ -1,6 +1,5 @@
 import React from "react";
 import img from "../assets/photos/test.jpg";
-import link from "../assets/photos/foreign.png";
 import { Link, animateScroll as scroll } from "react-scroll";
 import WelcomeSvg from "../components/WelcomeSvg";
 export default function Home() {
@@ -28,16 +27,13 @@ export default function Home() {
               to="portfolio"
               spy={true}
               smooth={true}
-              // offset={-70}
-              duration={700}
-              className="btn"
+              offset={-70}
+              duration={800}
             >
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <i class="fas fa-angle-down bounce"></i>
-              My Portfolios
+              <div class="button" id="button-5">
+                <div id="translate"></div>
+                <a href="#">My Portfolios <i class="fas fa-angle-down bounce"></i></a>
+              </div>
             </Link>
           </div>
         </div>
@@ -61,13 +57,10 @@ export default function Home() {
               dignissimos officia pariatur dicta voluptas repellat?
             </p>
             <div className="tech">
-              <a id="button-1" class="button" href="#">
-                View Project
-                <img
-                  id="arrow-hover"
-                  src={link}
-                />
-              </a>
+              <div class="button" id="button-5">
+                <div id="translate"></div>
+                <a href="#">View Project</a>
+              </div>
               <div className="tech-icons">
                 <i class="fab fa-laravel laravel"></i>
                 <i class="fab fa-bootstrap bs"></i>
@@ -91,13 +84,10 @@ export default function Home() {
               dignissimos officia pariatur dicta voluptas repellat?
             </p>
             <div className="tech">
-              <a id="button-1" class="button" href="#">
-                View Project
-                <img
-                  id="arrow-hover"
-                  src="https://github.com/atloomer/atloomer.github.io/blob/master/img/iconmonstr-paper-plane-1-120.png?raw=true"
-                />
-              </a>
+              <div class="button" id="button-5">
+                <div id="translate"></div>
+                <a href="#">View Project</a>
+              </div>
               <div className="tech-icons">
                 <i class="fab fa-laravel laravel"></i>
                 <i class="fab fa-bootstrap bs"></i>
@@ -121,13 +111,10 @@ export default function Home() {
               dignissimos officia pariatur dicta voluptas repellat?
             </p>
             <div className="tech">
-              <a id="button-1" class="button" href="#">
-                View Project
-                <img
-                  id="arrow-hover"
-                  src="https://github.com/atloomer/atloomer.github.io/blob/master/img/iconmonstr-paper-plane-1-120.png?raw=true"
-                />
-              </a>
+              <div class="button" id="button-5">
+                <div id="translate"></div>
+                <a href="#">View Project</a>
+              </div>
               <div className="tech-icons">
                 <i class="fab fa-laravel laravel"></i>
                 <i class="fab fa-bootstrap bs"></i>
@@ -139,7 +126,6 @@ export default function Home() {
             <img src={img} alt="" />
           </div>
         </div>
-        
       </section>
     </div>
   );
