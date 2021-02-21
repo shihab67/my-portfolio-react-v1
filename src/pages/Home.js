@@ -32,7 +32,9 @@ export default function Home() {
             >
               <div class="button" id="button-5">
                 <div id="translate"></div>
-                <a href="#">My Portfolios <i class="fas fa-angle-down bounce"></i></a>
+                <a href="#">
+                  My Portfolios <i class="fas fa-angle-down bounce"></i>
+                </a>
               </div>
             </Link>
           </div>
@@ -126,6 +128,13 @@ export default function Home() {
             <img src={img} alt="" />
           </div>
         </div>
+
+        {/* <div className="view-all-btn">
+          <div class="button" id="button-5">
+            <div id="translate"></div>
+            <Link to="/portfolio">All Projects</Link>
+          </div>
+        </div> */}
       </section>
     </div>
   );

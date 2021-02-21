@@ -5,11 +5,32 @@ footer {
   background-color: #000;
   color: white;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  height: 50px;
-  box-shadow: inset 1px 8px 10px -10px #15e1f0;
+  height: 55px;
+  box-shadow: inset 1px 8px 9px -10px #15e1f0;
   position: relative;
+}
+footer .footer-links{
+  position: absolute;
+  left: 0;
+}
+.footer-link{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.footer-link li{
+  list-style: none;
+}
+
+.footer-link li a{
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+}
+.footer-link li a:hover{
+  color: #15e1f0;
 }
 footer .icons {
   position: absolute;
@@ -17,7 +38,7 @@ footer .icons {
   padding-right: 2em;
 }
 .icons i {
-  font-size: 1.3em;
+  font-size: 1.2em;
   margin: 5px;
   color: #15e1f0;
 }
@@ -54,17 +75,21 @@ footer .icons {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.content{
+  position: absolute;
+  bottom: 0;
+}
 .content p {
   display: flex;
   justify-content: center;
-  font-size: 11px;
+  font-size: 10px;
 }
 .thinking{
   position: absolute;
   right: 0;
-  bottom: 42px;
+  bottom: 48px;
 }
 .thinking svg{
-  height: 80px;
-  width: 250px;
+  height: 70px;
+  width: 240px;
 }

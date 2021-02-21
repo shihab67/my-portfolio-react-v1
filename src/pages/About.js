@@ -1,6 +1,5 @@
 import React from "react";
 import ShihabSvg from "../components/ShihabSvg";
-import "../assets/about.css";
 import ProgramSvg from "../components/ProgramSvg";
 import { Link } from "react-router-dom";
 import LaravelSvg from "../components/LaravelSvg";
@@ -18,108 +17,28 @@ import Cpp from "../components/logos/Cpp";
 import Bootstrap from "../components/logos/Bootstrap";
 import Expressjs from "../components/logos/Expressjs";
 import Latex from "../components/logos/Latex";
+import Typing from "react-typing-animation";
 
 export default function About() {
   return (
     <div>
       <section className="about">
-        <div className="desc">
-          <fieldset>
-            <legend>
-              <h4>Who I Am</h4>
-            </legend>
-            <p>
-              Hello, I'm SAYEDUR RAHMAN SHIHAB. I did my Bachelor in Computer
-              Science And Software Engineering at AIUB. Right now i'm working as
-              a full time Software Engineer. And i build awesome Web
-              experiences.
-            </p>
-          </fieldset>
+        <div className="about-content">
+          <div className="header">
+            <h2>About Me</h2>
+            <div className="border"></div>
+          </div>
         </div>
-        <div className="svg">
-          <ShihabSvg />
-        </div>
-      </section>
-
-      <section className="expertise">
-        <div className="svg">
-          <ExpertSvg />
-        </div>
-        <div className="desc">
-          <fieldset>
-            <legend>
-              <h4>My Expertise</h4>
-            </legend>
-            <div className="logos">
-              <div className="logo html">
-                <Html />
-              </div>
-              <div className="logo css">
-                <Css />
-              </div>
-              <div className="logo js">
-                <Js />
-              </div>
-              <div className="logo bootstrap">
-                <Bootstrap />
-              </div>
-              <div className="logo php">
-                <Php />
-              </div>
-              <div style={{ width: "100%" }}></div>
-              <div className="logo laravel">
-                <Laravel />
-              </div>
-              <div className="logo react">
-                <Reactt />
-              </div>
-              <div className="logo mysql">
-                <Mysql />
-              </div>
-              <div className="logo cpp">
-                <Cpp />
-              </div>
-              <div className="logo java">
-                <Java />
-              </div>
-              <div style={{ width: "100%" }}></div>
-              <div className="logo cs">
-                <Cs />
-              </div>
-            </div>
-          </fieldset>
-        </div>
-      </section>
-
-      <section className="program">
-        <div className="desc">
-          <fieldset>
-            <legend>
-              <h4>More About Me</h4>
-            </legend>
-            <p>
-              At the very beginnning i was afraid of programming but now it got
-              into my nervs :p
-            </p>
-          </fieldset>
-        </div>
-        <div className="svg">
-          <ProgramSvg />
-        </div>
-      </section>
-
-      <section className="fun_fact">
-        <div className="svg">
-          <LaravelSvg />
-        </div>
-        <div className="desc">
-          <fieldset>
-            <legend>
-              <h4>Fun Fact</h4>
-            </legend>
-            <p>I made my first client website using Laravel.</p>
-          </fieldset>
-        </div>
+        <Typing speed={30}>
+          <p id="typing">
+            <span className="hidden-text">|</span>
+            <Typing.Reset count={1} delay={3000} />I have studied Computer
+            Science And Software Engineering at American International
+            Internation Univertsity Of Bangladesh. I started programming in high
+            school and looking forward to a career based around programming.
+            Backend Developer with primary focus on Laravel & Express. Download my <a href="" className="resume">resume</a>
+          </p>
+        </Typing>
       </section>
     </div>
   );

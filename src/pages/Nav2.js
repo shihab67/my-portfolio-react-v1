@@ -10,15 +10,18 @@ export default function Nav2() {
   const [isActive, setIsActive] = useState(false);
   const [isShowList, setIsShowList] = useState(false);
   const [isFade, setIsFade] = useState(false);
+  const [textColor, setTextColor] = useState(null);
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 50) {
+      if (window.pageYOffset > 40) {
         setIsNav(true);
+        setTextColor("#15e1f0");
       } else {
         setIsNav(false);
+        setTextColor(null);
       }
     });
-  }, [isNav, isActive, isFade, isShowList]);
+  }, [isNav, isActive, isFade, isShowList, textColor]);
   function handleClick() {
     setIsActive(true);
     setIsShowList(true);
@@ -36,7 +39,7 @@ export default function Nav2() {
       <nav className={`nav ${isNav === true ? "affix" : null}`}>
         <div className="nav-container">
           <div className="logo">
-            <a href="#">Sayedur Rahman</a>
+            <Link to="/">Sayedur Rahman</Link>
           </div>
           <div
             id="mainListDiv"
@@ -45,17 +48,17 @@ export default function Nav2() {
             }`}
           >
             <ul className="navlinks">
+              {/* <li>
+                <Link className="link" to="/portfolio" style={{ color: textColor }}>Portfolio</Link>
+              </li> */}
               <li>
-                <Link className="link" to="/">Home</Link>
+                <Link className="link" to="/about" style={{ color: textColor }}>About</Link>
               </li>
               <li>
-                <Link className="link" to="/portfolio">Portfolio</Link>
+                <Link className="link" to="/skills" style={{ color: textColor }}>Skills</Link>
               </li>
               <li>
-                <Link className="link" to="/about">About</Link>
-              </li>
-              <li>
-                <Link className="link" to="/contact">Contact</Link>
+                <Link className="link" to="/contact" style={{ color: textColor }}>Contact</Link>
               </li>
             </ul>
           </div>
