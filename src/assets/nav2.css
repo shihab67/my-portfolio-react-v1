@@ -6,7 +6,7 @@
   --overlay-color: rgba(24, 39, 51, 0.85);
   --menu-speed: 0.75s;
 }
-html{
+html {
   height: 100%;
 }
 html,
@@ -16,6 +16,16 @@ body {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   background-color: #191f26;
+  overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
 }
 .nav {
   width: 100%;
@@ -744,7 +754,7 @@ h3 {
   cursor: pointer;
 }
 
-#button-5 a {
+#button-5 a, #button-5 button {
   position: relative;
   text-decoration: none;
   color: #15e1f0;
@@ -774,8 +784,17 @@ h3 {
   left: 0;
 }
 
-#button-5:hover a {
+#button-5:hover a,#button-5:hover button  {
   color: var(--primary-color);
+}
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
 
 .single-port .port-desc .tech {
@@ -802,7 +821,8 @@ h3 {
 /* Home CSS End*/
 
 /* About CSS Start*/
-.about,.contact {
+.about,
+.contact {
   height: 100vh;
   position: relative;
   display: flex;
@@ -810,25 +830,27 @@ h3 {
   justify-content: center;
   align-items: center;
 }
-.port{
+.port {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.port .ports{
+.port .ports {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0 55px 50px 55px;
 }
-.about-content,.contact-content,.port-content {
+.about-content,
+.contact-content,
+.port-content {
   position: absolute;
   top: 15%;
 }
-.resume{
+.resume {
   color: #15e1f0;
   text-decoration: none;
 }
@@ -855,9 +877,8 @@ h3 {
   justify-content: center;
   align-items: center;
   margin-bottom: 10rem;
-
 }
-.expertise{
+.expertise {
   width: 100%;
 }
 .logos {
@@ -866,7 +887,7 @@ h3 {
   padding: 0 150px 0 150px;
   display: grid;
   gap: 2em;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
 }
 .logo {
   margin: auto;
@@ -883,36 +904,47 @@ h3 {
   transform: scale(1.2);
 }
 .logo.html {
+  box-shadow: 0px 0px 7px 4px #ff4b00;
   animation: border-flicker-html 2s linear infinite;
 }
 .logo.css {
+  box-shadow: 0px 0px 7px 4px #2196f3;
   animation: border-flicker-css 2s linear infinite;
 }
 .logo.js {
+  box-shadow: 0px 0px 7px 4px #f7df1e;
   animation: border-flicker-js 2s linear infinite;
 }
 .logo.bootstrap {
+  box-shadow: 0px 0px 7px 4px #563d7c;
   animation: border-flicker-bootstrap 2s linear infinite;
 }
 .logo.php {
+  box-shadow: 0px 0px 7px 4px #8993be;
   animation: border-flicker-php 2s linear infinite;
 }
 .logo.laravel {
+  box-shadow: 0px 0px 7px 4px #ff2d20;
   animation: border-flicker-laravel 2s linear infinite;
 }
 .logo.react {
+  box-shadow: 0px 0px 7px 4px #61dafb;
   animation: border-flicker-react 2s linear infinite;
 }
 .logo.mysql {
+  box-shadow: 0px 0px 7px 4px #f29111;
   animation: border-flicker-mysql 2s linear infinite;
 }
 .logo.cs {
+  box-shadow: 0px 0px 7px 4px #9a4993;
   animation: border-flicker-cs 2s linear infinite;
 }
 .logo.java {
+  box-shadow: 0px 0px 7px 4px #e76f00;
   animation: border-flicker-java 2s linear infinite;
 }
 .logo.cpp {
+  box-shadow: 0px 0px 7px 4px #5c8dbc;
   animation: border-flicker-cpp 2s linear infinite;
 }
 @keyframes border-flicker-html {
@@ -1352,7 +1384,7 @@ h3 {
 /* Skills CSS End*/
 
 /* Contact CSS Start*/
-.contact .form{
+.contact .form {
   height: 100vh;
   color: #fff;
   display: flex;
@@ -1360,11 +1392,11 @@ h3 {
   align-items: center;
   box-sizing: border-box;
   border-radius: 15px;
-  padding: 240px 130px 30px 130px;
-  margin-bottom: 100px;
-  margin-top: 50px;
+  padding: 270px 130px 30px 130px;
+  margin-bottom: 150px;
+  margin-top: 70px;
 }
-.form .left{
+.form .left {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1374,41 +1406,45 @@ h3 {
   padding: 0px 20px 20px 30px;
   margin-top: 4rem;
 }
-.left .submit{
+.left .submit {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.form .right{
+.form .right {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 50%;
 }
-.right p{
+.right p {
   font-size: 14px;
   color: gray;
 }
-.form .social{
+.form .social {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.social .social-single{
+.social .social-single {
   display: flex;
   align-items: center;
   margin: 10px 10px;
 }
-.social-single img{
+.social-single img {
   width: 35px;
   padding-right: 15px;
 }
-.social-single a{
+.social-single a {
   text-decoration: none;
   color: #fff;
   font-size: 13px;
 }
-.social-single a:hover{
+.social-single a:hover {
   color: #15e1f0;
+}
+.error-message{
+  color: red;
+  font-size: 10px;
 }
 /* Contact CSS End*/

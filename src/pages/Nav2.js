@@ -14,6 +14,7 @@ export default function Nav2() {
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.pageYOffset > 40) {
+        //console.log(window.pageYOffset);
         setIsNav(true);
         setTextColor("#15e1f0");
       } else {
@@ -52,13 +53,27 @@ export default function Nav2() {
                 <Link className="link" to="/portfolio" style={{ color: textColor }}>Portfolio</Link>
               </li> */}
               <li>
-                <Link className="link" to="/about" style={{ color: textColor }}>About</Link>
+                <Link className="link" to="/about" style={{ color: textColor }}>
+                  About
+                </Link>
               </li>
               <li>
-                <Link className="link" to="/skills" style={{ color: textColor }}>Skills</Link>
+                <Link
+                  className="link"
+                  to="/skills"
+                  style={{ color: textColor }}
+                >
+                  Skills
+                </Link>
               </li>
               <li>
-                <Link className="link" to="/contact" style={{ color: textColor }}>Contact</Link>
+                <Link
+                  className="link"
+                  to="/contact"
+                  style={{ color: textColor }}
+                >
+                  Contact
+                </Link>
               </li>
             </ul>
           </div>
